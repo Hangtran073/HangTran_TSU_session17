@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #box {
+                background-color: gray;
+                width: 50%;
+                padding: 1px 10px 20px;
+            }
+            #text {
+
+                visibility:hidden;
+                opacity:0;
+                        
+                background-color: white;
+                width: 50%;
+                line-height: 0px;
+                padding: 5px 10px 20px;
+                border-radius: 3px;
+                margin-left: 20%;
+
+                
+            }
+            #text.show{
+                visibility:visible;
+                opacity:1;
+            }
+
+            .close {
+                position:relative;
+                top:10px;
+                padding-left:95%;
+                border: none;
+                background: none;
+                margin-top: 5px;
+                
+            }
+
+            button {
+                background-color: gray;
+                border-radius: 3px;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="box">
+            <h1>Modal Example</h1>
+            <button id="nut">Open Modal</button>
+            <div id="text">
+                <span class="close">&times;</span>
+                <p id="textModal">Some text in the Modal</p>
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const nutOpen = document.getElementById("nut");
+                const close = document.querySelector(".close");
+                const text = document.getElementById("text");
+                nutOpen.addEventListener("click", function () {
+                    text.classList.add ("show");
+
+                });
+                close.addEventListener("click", function () {
+                    text.classList.remove("show");
+
+                });
+            });
+
+
+
+
+
+        </script>
+    </body>
+
+</html>
