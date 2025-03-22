@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>click hidden text</title>
+    </head>
+
+    <body>
+
+        <p id="text">This is a text</p>
+        <button id="nut1">Hide text</button>
+        <button id="nut2">Show text</button>
+        <script>
+
+            //Lấy phần tử từ Dom
+            const text = document.getElementById("text");
+            const nut1 = document.getElementById("nut1");
+            const nut2 = document.getElementById("nut2");
+            //Thêm sự kiện click cho nut Nut1
+            nut1.addEventListener("click", function () {
+                text.style.display = "none"; //ẩn đoạn văn bản
+            });
+            nut2.addEventListener("click", function () {
+                text.style.display = "block"; //hiển thị đoạn văn bản
+            });
+        </script>
+    </body>
+
+</html>
