@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ứng dụng tính toán đơn giản</title>
+        <link rel="stylesheet" href="./ex06.css">
+    </head>
+
+    <body>
+       
+        <table>
+
+            <tr>
+               <td colspan="4" style="border:none"><input type="text" id="display" disable></td> 
+
+            </tr>
+            <tr style="background-color: rgb(228, 226, 226);">
+                <td><button class="operator" onclick="appendOperator('+')">+</button></td>
+                <td><button class="operator" onclick="appendOperator('-')">-</button></td>
+                <td><button class="operator" onclick="appendOperator('*')">*</button></td>
+                <td><button class="operator" onclick="appendOperator('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button  onclick="appendOperator(7)">7</button></td>
+                <td><button  onclick="appendOperator(8)">8</button></td>
+                <td><button  onclick="appendOperator(9)">9</button></td>
+                <td rowspan="4" ><button  onclick="calculate()" style="background-color: dodgerblue; color:white; border:none">=</button></td>
+            </tr>
+            <tr>
+                <td><button  onclick="appendOperator(4)">4</button></td>
+                <td><button  onclick="appendOperator(5)">5</button></td>
+                <td><button  onclick="appendOperator(6)">6</button></td>
+
+            </tr>
+            <tr>
+                <td><button  onclick="appendOperator(1)">1</button></td>
+                <td><button  onclick="appendOperator(2)">2</button></td>
+                <td><button  onclick="appendOperator(3)">3</button></td>
+
+            </tr>
+            <tr>
+                <td><button  onclick="appendOperator(0)">0</button></td>
+                <td><button  onclick="appendDot()">.</button></td>
+                <td><button  onclick="clearDisplay()">C</button></td>
+
+            </tr>
+        </table>
+        <script src="./ex06.js"></script>
+    </body>
+
+</html>
